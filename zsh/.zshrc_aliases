@@ -1,0 +1,15 @@
+# Justin Park (github.com/justinpxrk-coding)
+#
+# Contains aliases for interactive zsh shells.
+
+# cd
+alias "c-conf"="cd ${XDG_CONFIG_HOME}"
+alias "c-git"="cd ${GIT_HOME}"
+alias "c-fork"="cd ${GIT_FORK_HOME}"
+alias "c-public"="cd ${GIT_PUBLIC_HOME}"
+alias "c-source"="cd ${GIT_SOURCE_HOME}"
+alias "c-dot"="cd ${GIT_DOTFILES_HOME}"
+
+# nvim
+alias "vi"="nvim"
+alias "vim"="nvim"

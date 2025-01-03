@@ -1,0 +1,77 @@
+# Justin Park (github.com/justinpxrk-coding)
+#
+# Contains my zsh environment path variables for interactive zsh shells.
+
+# Paths
+# My environment paths
+export XDG_CACHE_HOME="${HOME}/.cache"
+export XDG_CONFIG_HOME="${HOME}/.config"
+export GIT_HOME="${HOME}/Git"
+export GIT_FORK_HOME="${GIT_HOME}/fork"
+export GIT_PUBLIC_HOME="${GIT_HOME}/public"
+export GIT_SOURCE_HOME="${GIT_HOME}/source"
+export GIT_DOTFILES_HOME="${GIT_SOURCE_HOME}/config/justinpxrk-coding/.dotfiles"
+export GIT_SCRIPTS_HOME="${GIT_SOURCE_HOME}/tools/justinpxrk-coding/scripts"
+
+# eval-cache
+# Included convenience function _evalcache_clear clears .evalcache
+export ZSH_EVALCACHE_DIR="${XDG_CACHE_HOME}/eval-cache"
+# export ZSH_EVALCACHE_DISABLE='true'   # Bypass evalcache
+
+# Homebrew
+export HOMEBREW_PREFIX="/opt/homebrew"
+homebrew_opt_prefix="${HOMEBREW_PREFIX}/opt"
+
+# gnu-getopt
+export PATH="${homebrew_opt_prefix}/gnu-getopt/bin:${PATH}"
+
+# grep
+export PATH="${homebrew_opt_prefix}/grep/libexec/gnubin:${PATH}"
+
+# JetBrains Toolbox
+export PATH="${PATH}:/Users/justinpxrk/Library/Application Support/JetBrains/Toolbox/scripts"
+
+# nvim
+export VIM="${XDG_CONFIG_HOME}/nvim"
+export VIMRUNTIME="${homebrew_opt_prefix}/neovim/share/nvim/runtime/"
+
+# nvm
+export NVM_DIR="${HOME}/.nvm"
+# lukechilds/zsh-nvm
+# TODO: Look into how zsh-nvm loads completions in order to avoid completion
+#       errors printing to stderr for the first few seconds after shell
+#       startup. Enabling NVM_COMPLETION causes autocompletion to print to
+#       stderr for approximately < 1.5 seconds after prompt start (I suspect
+#       incompatibilities between Zinit's turbo loading and zsh-nvm's
+#       completion loading method. Does not affect functionality but a minor
+#       annoyance. Manually source completions here to avoid using
+#       NVM_COMPLETION
+export NVM_COMPLETION='false'
+export NVM_LAZY_LOAD='true'
+# export NVM_LAZY_LOAD_EXTRA_COMMANDS=('vim', 'yarn')
+export NVM_NO_USE='false'
+source "${NVM_DIR}/bash_completion"
+
+# pyenv
+export PYENV_HOME="${HOME}/.pyenv"
+export PATH="${pyenv_home}/bin:${PATH}"
+
+# sqlite
+export CPPFLAGS="-I${homebrew_opt_prefix}/sqlite/include"
+export LDFLAGS="-L${homebrew_opt_prefix}/sqlite/lib"
+export PATH="${homebrew_opt_prefix}/sqlite/bin:${PATH}"
+export PKG_CONFIG_PATH="${homebrew_opt_prefix}/zlib/lib/pkgconfig"
+
+# Zinit
+export ZINIT_HOME="${homebrew_opt_prefix}/zinit"
+
+# zlib
+export CPPFLAGS="-I${homebrew_opt_prefix}/zlib/include"
+export LDFLAGS="-L${homebrew_opt_prefix}/zlib/lib"
+export PKG_CONFIG_PATH="${homebrew_opt_prefix}/zlib/lib/pkgconfig"
+
+# zsh-users/zsh-autosuggestions
+export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=128
+
+# Unset any non exported variables here to avoid memory leaks
+unset homebrew_opt_prefix
