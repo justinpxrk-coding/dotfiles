@@ -9,3 +9,15 @@ vim.api.nvim_create_autocmd({ "UIEnter", "ColorScheme" }, {
 vim.api.nvim_create_autocmd("UILeave", {
   callback = function() io.write("\027]111\027\\") end,
 })
+
+vim.api.nvim_create_autocmd({"FocusGained", "VimEnter"}, {
+  callback = function()
+    vim.wo.cursorline = true
+  end,
+})
+
+vim.api.nvim_create_autocmd({"FocusLost"}, {
+  callback = function()
+    vim.wo.cursorline = false
+  end,
+})
