@@ -50,9 +50,6 @@ export NVM_LAZY_LOAD='true'
 export NVM_NO_USE='false'
 source "${NVM_DIR}/bash_completion"
 
-# prettierd
-export PRETTIERD_LOCAL_PRETTIER_ONLY='true'
-
 # pyenv
 export PYENV_HOME="${HOME}/.pyenv"
 export PATH="${pyenv_home}/bin:${PATH}"

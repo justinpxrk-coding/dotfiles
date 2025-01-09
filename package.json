@@ -1,7 +1,4 @@
 {
   "name": ".dotfiles",
-  "packageManager": "yarn@4.6.0",
-  "devDependencies": {
-    "prettier": "^3.4.2"
-  }
+  "packageManager": "yarn@4.6.0"
 }
