@@ -1,12 +1,12 @@
 version: 2
 root-markers:
   - .git/
-log-file: $XDG_STATE_HOME/efm-langserver/log
+log-file: /Users/justinpxrk/.local/state/efm-langserver/log
 log-level: 1
-format-debounce: 1s
-lint-debounce: 1s
+format-debounce: 0.5s
+lint-debounce: 0.5s
 provide-definition: false
 triggers-chars: []
 commands: []
+tools: {}
 languages: {}
-tools: []

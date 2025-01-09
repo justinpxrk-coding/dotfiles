@@ -1,4 +1,5 @@
 require("config.lazy")
+require("config.lspconfig")
 
 vim.api.nvim_create_autocmd({ "UIEnter", "ColorScheme" }, {
   callback = function()
