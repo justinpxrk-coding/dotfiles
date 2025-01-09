@@ -4,8 +4,6 @@
 
 # Paths
 # My environment paths
-export XDG_CACHE_HOME="${HOME}/.cache"
-export XDG_CONFIG_HOME="${HOME}/.config"
 export GIT_HOME="${HOME}/Git"
 export GIT_FORK_HOME="${GIT_HOME}/fork"
 export GIT_PUBLIC_HOME="${GIT_HOME}/public"
@@ -51,6 +49,9 @@ export NVM_LAZY_LOAD='true'
 # export NVM_LAZY_LOAD_EXTRA_COMMANDS=('vim', 'yarn')
 export NVM_NO_USE='false'
 source "${NVM_DIR}/bash_completion"
+
+# prettierd
+export PRETTIERD_LOCAL_PRETTIER_ONLY='true'
 
 # pyenv
 export PYENV_HOME="${HOME}/.pyenv"
