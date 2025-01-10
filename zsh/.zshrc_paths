@@ -8,7 +8,7 @@ export GIT_HOME="${HOME}/Git"
 export GIT_FORK_HOME="${GIT_HOME}/fork"
 export GIT_PUBLIC_HOME="${GIT_HOME}/public"
 export GIT_SOURCE_HOME="${GIT_HOME}/source"
-export GIT_DOTFILES_HOME="${GIT_SOURCE_HOME}/config/justinpxrk-coding/.dotfiles"
+export GIT_DOTFILES_HOME="${GIT_SOURCE_HOME}/config/justinpxrk-coding/dotfiles"
 export GIT_SCRIPTS_HOME="${GIT_SOURCE_HOME}/tools/justinpxrk-coding/scripts"
 
 # eval-cache
