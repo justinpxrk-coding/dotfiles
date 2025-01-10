@@ -13,7 +13,7 @@
 ###
 
 # Define XDG Base Directory path environment variables only. All other path
-# environment variables should be defined in .zshrc_paths
+# environment variables should be defined in .zshrc_paths.
 # User directories
 export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_CONFIG_HOME="${HOME}/.config"
@@ -41,14 +41,12 @@ if [[ -f "${XDG_CONFIG_HOME}/zsh/.p10k.zsh" ]]; then
   source "${XDG_CONFIG_HOME}/zsh/.p10k.zsh"
 fi
 
-# Source Other Config Files
+# Source other config files.
 zsh_config_home="${XDG_CONFIG_HOME}/zsh"
-# Configure Paths
 source "${zsh_config_home}/.zshrc_paths"
-# Configure aliases
 source "${zsh_config_home}/.zshrc_aliases"
 
-# Load Zinit
+# Load Zinit.
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Load Zinit plugins
@@ -57,15 +55,16 @@ zinit for \
     light-mode \
   romkatv/powerlevel10k
 
-# After loading eval-cache, run `source .zshrc_evals` since `.zshrc_evals`
-# relies on `_evalcache`
+# After loading eval-cache in turbo mode (load asynchronously after first
+# prompt), run `source .zshrc_evals` since `.zshrc_evals` relies on
+# `_evalcache`.
 zinit for \
     atload"source ${zsh_config_home}/.zshrc_evals" \
     lucid \
     wait \
   mroth/evalcache
 
-# Turbo mode (load asynchronously after first prompt)
+# Load plugins in turbo mode.
 zinit for \
     lucid \
     wait \
@@ -74,14 +73,14 @@ zinit for \
   lukechilds/zsh-nvm
 
 # fast-syntax-highlighting should be loaded last so `zicompinit` can be hooked
-# before it loads
+# before it loads.
 zinit for \
     atinit"zicompinit; zicdreplay" \
     lucid \
     wait \
   zdharma-continuum/fast-syntax-highlighting
 
-# Unset any non exported variables here to avoid memory leaks
+# Unset any non exported variables here to avoid memory leaks.
 unset zsh_config_home
 
 ### Benchmarking Tools

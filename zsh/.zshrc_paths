@@ -23,6 +23,10 @@ homebrew_opt_prefix="${HOMEBREW_PREFIX}/opt"
 # gnu-getopt
 export PATH="${homebrew_opt_prefix}/gnu-getopt/bin:${PATH}"
 
+# goenv
+export GOENV_ROOT="${homebrew_opt_prefix}/goenv"
+export PATH="${GOENV_ROOT}/bin:${PATH}"
+
 # grep
 export PATH="${homebrew_opt_prefix}/grep/libexec/gnubin:${PATH}"
 
