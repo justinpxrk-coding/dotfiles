@@ -56,7 +56,7 @@ source "${NVM_DIR}/bash_completion"
 
 # pyenv
 export PYENV_HOME="${HOME}/.pyenv"
-export PATH="${pyenv_home}/bin:${PATH}"
+export PATH="${PYENV_HOME}/bin:${PATH}"
 
 # sqlite
 export CPPFLAGS="-I${homebrew_opt_prefix}/sqlite/include"
